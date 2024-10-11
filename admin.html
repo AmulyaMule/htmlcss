@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Application Details</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Leave Application Details</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Date</th>
+        <th>Applicant Name</th>
+        <th>Authority</th>
+        <th>Reason</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+      <tr id="leaveDetails"></tr>
+    </table>
+  </div>
+  <script>
+    // Retrieve data from localStorage
+    const data = JSON.parse(localStorage.getItem('leaveApplication'));
+    
+    // Display data in table
+    const tableRow = document.getElementById('leaveDetails');
+    tableRow.innerHTML = `
+      <td>${data.date}</td>
+      <td>${data.applicantName}</td>
+      <td>${data.authority}</td>
+      <td>${data.reason}</td>
+      <td>${data.startDate}</td>
+      <td>${data.endDate}</td>
+    `;
+  </script>
+</body>
+</html>

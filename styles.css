@@ -1,0 +1,10 @@
+/* styles.css */
+/* Add any global CSS rules here - will be applied to both pages */
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;  /* Include padding and border in element width */
+}
